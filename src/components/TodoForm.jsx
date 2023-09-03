@@ -4,7 +4,7 @@ const TodoForm = () => {
 
 
     // state
-    const [text, setText] = useState('Hello');
+    const [text , setText] = useState('Hello');
 
     const onFormSubmit = () =>{
         
