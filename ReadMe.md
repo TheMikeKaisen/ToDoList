@@ -28,3 +28,14 @@
 ## nodemon
 - in server folder, install nodemon: npm i nodemon
 - in package.json, replace the script : "start":"node index.js" with "start":"nodemon index.js"
+
+## connecting Database
+- inside server, install mongoose: npm i mongoose;
+- mongoose is used to connect the mongodb database to the server.
+- import mongoose.
+- to connect to the database, it uses **connect** function.
+- connect function takes two arguments: first is the mongodb url, which you have to copy from the mongodb cluster itself. and second is `{ useNewUrlParser: true }`, which means the previous url has been depricated, so use the new url.
+- mongoose.connection.on() function will is used to do an action, if the server is connected / disconnected to the database. here, if connected, it will print 'database connected 'message in the console, otherwise 'database disconnected'.
+
+- go to index.js, import connection from db.js
+- and use `connection()` function before app.listen.
