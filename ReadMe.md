@@ -13,3 +13,10 @@
 - initialize middle ware as an array: const middleware = [thunk]
 - we cannot just add middle ware to the composeWithDevTools() function, to do that, we have to import another funtion from redux : **applyMiddleware**
 - then we pass thunk as `composeWithDevTools(applyMiddleware(...middleware))`
+
+## wrapping index.js with Provider
+NEED: In a React application that uses Redux for state management, the Provider component from the react-redux library is used to make the Redux store available to the entire application. It is an essential part of integrating Redux with React.
+
+- in client, install react-redux: npm i react-redux
+- in client/index.js, import Provider from react-redux and store from redux/store.js
+- wrap the App inside Provider.
